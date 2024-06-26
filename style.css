@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(24,16,162);
+    background: linear-gradient(90deg, rgba(24,16,162,1) 0%, rgba(0,255,244,1) 100%);
+}
+header{
+    text-align: center;
+    margin-top: 8vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+}
+.container{
+    background-color: rgb(50, 50, 50);
+    height: 10vh;
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    border: 2px solid rgba(0,255,244,1);
+}
+.stat{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+.totalTask{
+    color: white;
+    font-size: 1.2em;
+}
+.completedTask{
+    color: white;
+    font-size: 1.2em;
+}
+.task{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+.textArea{
+    height: 30px;
+    width: 55%;
+}
+.textArea{
+    border: 3px solid rgba(0,255,244,1);
+    background-color: white;
+    border-radius: 10px;
+    font-size: 1em;
+}
+.textArea::placeholder{
+    text-align: center;
+}
+.add_btn{
+    color: black;
+    font-size: 1.2em;
+    background-color: c;
+    margin-right: 5%;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgba(0,255,244,1);
+}
+.add_btn:hover{
+    background-color: rgb(166, 255, 251);
+}
+.storage{
+    width: 35vw;
+    height: fit-content;
+    margin-left: 32.5vw;
+
+}
+.taskList{
+    background-color: rgb(50, 50, 50);
+    height: 10vh;
+    width: 35vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: 2px solid rgba(0,255,244,1);
+}
+.checkBox_none{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 3px solid rgba(0,255,244,1);
+    border-radius: 10px;
+    margin-left: 5%;
+    cursor: pointer;
+}
+.checkBox{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 3px solid rgba(0,255,244,1);
+    border-radius: 10px;
+    margin-left: 5%;
+    background: url(icon/8541612_check_tick_mark_icon.png);
+    background-size: cover;
+    cursor: pointer;
+    background-color: white;
+}
+.taskHeading{
+    color: white;
+}
+.remove_btn{
+    color: white;
+    background: rgba(0,255,244,1);
+    color: black;
+    font-size: 20px;
+    margin-right: 5%;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.remove_btn:hover{
+    background-color: rgb(166, 255, 251);
+}
+@media screen and (max-width:1300px)
+{
+    .container{
+        height: 10vh;
+        width: 70vw;
+        margin-left: 15vw;
+        margin-top: 5vh;
+        border-radius: 15px;
+        margin-bottom: 50px;
+    }
+    .storage{
+        width: 50vw;
+        height: fit-content;
+        margin-left: 25vw;
+    }
+    .taskList{
+        height: 10vh;
+        width: 50vw;
+        margin-bottom: 10px;
+        border-radius: 15px;
+    }
+}
+@media screen and (max-width:900px)
+{
+    .container{
+        height: 10vh;
+        width: 90vw;
+        margin-left: 5vw;
+        margin-top: 5vh;
+        border-radius: 15px;
+        margin-bottom: 50px;
+    }
+    .storage{
+        width: 70vw;
+        height: fit-content;
+        margin-left: 15vw;
+    }
+    .taskList{
+        height: 10vh;
+        width: 70vw;
+        margin-bottom: 10px;
+        border-radius: 15px;
+    }
+}
+@media screen and (max-width:700px)
+{
+    .container{
+        width: 95vw;
+        margin-left: 2.5vw;
+    }
+    .stat{
+        width: 40%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .task{
+        width: 60%;
+    }
+    .add_btn{
+        margin-right: 0;
+    }
+    .storage{
+        width: 80vw;
+        height: fit-content;
+        margin-left: 10vw;
+    }
+    .taskList{
+        height: 10vh;
+        width: 80vw;
+        margin-bottom: 10px;
+        border-radius: 15px;
+    }
+}
+@media screen and (max-width:450px)
+{
+    .stat{
+        width: 30%;
+    }
+    .totalTask{
+        font-size: 0.8em;
+    }
+    .completedTask{
+        font-size: 0.8em;
+    }
+    .task{
+        width: 70%;
+    }
+    .textArea{
+        font-size: 0.8em;
+    }
+    .add_btn{
+        font-size: 1em;
+    }
+    .storage{
+        width: 90vw;
+        height: fit-content;
+        margin-left: 5vw;
+    }
+    .taskList{
+        height: 7vh;
+        width: 90vw;
+        margin-bottom: 10px;
+        border-radius: 15px;
+    }
+    .checkBox_none{
+        height: 20px;
+        width: 20px;
+    }
+    .checkBox{
+        height: 20px;
+        width: 20px;
+    }
+    .taskHeading{
+        font-size: 20px;
+    }
+    .remove_btn{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:350px){
+    .totalTask{
+        font-size: 0.7em;
+    }
+    .completedTask{
+        font-size: 0.7em;
+    }
+}

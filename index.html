@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>To Do List</header>
+    <div class="container">
+        <div class="stat">
+            <p class="totalTask">Total Task : 0</p>
+            <p class="completedTask">Completed Task : 0</p>
+        </div>
+        <div class="task">
+            <input type="text" class="textArea" placeholder="Enter your task">
+            <div class="add_btn" onclick="add_func()">Add Task</div>
+        </div>
+    </div>
+    <div class="storage">
+        <div class="taskList">
+            <div class="checkBox_none" onclick="check_func(event)"></div>
+            <h1 class="taskHeading">Gaming</h1>
+            <h1 class="remove_btn" onclick="remove_func(event)">Remove</h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
