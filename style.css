@@ -208,10 +208,10 @@ header{
         width: 30%;
     }
     .totalTask{
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
     .completedTask{
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
     .task{
         width: 70%;
