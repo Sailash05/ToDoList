@@ -14,11 +14,13 @@ function check_func(event)
         event.target.style.textDecoration = "none";
         event.target.parentElement.querySelector('.taskHeading').style.textDecoration = "none";
     }
+    calculate_func();
 }
 function remove_func(event)
 {
     console.log("hello world");
     event.target.parentElement.remove();
+    calculate_func();
 }
 function add_func()
 {
@@ -42,5 +44,26 @@ function add_func()
         newTask.appendChild(newBtn);
         storage.appendChild(newTask);
     }
-    taskValue.value = ""
+    taskValue.value = "";
+    calculate_func();
+}
+var totalTask = document.querySelector('.totalTask');
+var completedTask = document.querySelector('.completedTask');
+function calculate_func()
+{
+    var count= storage.querySelectorAll('.taskList').length;
+    var completedCount = 0
+    for(let i=0; i<count; i++)
+    {
+        if(storage.querySelectorAll('.taskList')[i].querySelector('div').classList.contains('checkBox'))
+        {
+            completedCount += 1;
+        }
+    }
+    display(count, completedCount);
+}
+function display(count, completedCount)
+{
+    totalTask.textContent = "Total Task : " + count;
+    completedTask.textContent = "Completed Task : " + completedCount;
 }
